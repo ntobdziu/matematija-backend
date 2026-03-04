@@ -65,7 +65,7 @@ builder.Services.AddCors(options =>
             .WithOrigins(
                 "http://localhost:3000",  // React dev server
                 "http://localhost:3001",
-                "https://matematija.netlify.app/"
+                "https://matematija.netlify.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
