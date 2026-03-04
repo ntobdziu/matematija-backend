@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\Controllers",
+    "\\Data",
+    "\\DTOs",
+    "\\Migrations",
+    "\\Models",
+    "\\{Controllers,Models,DTOs,Data,Services,Middleware}"
+  ],
+  "SelectedNode": "\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}
