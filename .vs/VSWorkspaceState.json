@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bin",
     "\\Controllers",
     "\\Data",
     "\\DTOs",
@@ -9,5 +8,6 @@
     "\\Models",
     "\\{Controllers,Models,DTOs,Data,Services,Middleware}"
   ],
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
