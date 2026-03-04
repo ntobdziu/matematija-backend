@@ -9,10 +9,6 @@ using MatematijaAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 //BAZA:
-var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL")
-    ?? builder.Configuration.GetConnectionString("Default");
-
-// Ako je DATABASE_URL u formatu mysql://, pretvori ga
 // Čitaj DATABASE_URL iz Environment (Railway postavlja automatski)
 var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 string connectionString;
@@ -35,6 +31,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         connectionString,
         new MySqlServerVersion(new Version(8, 0, 21))
     ));
+
 // ===== JWT AUTENTIFIKACIJA =====
 var jwtKljuc = builder.Configuration["Jwt:Kljuc"]!;
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -57,7 +54,7 @@ builder.Services.AddAuthorization();
 
 // ===== SERVISI =====
 builder.Services.AddScoped<IJwtService, JwtService>();
-builder.Services.AddScoped<IEmailService, EmailService>(); // PREMJESTIO OVDJE
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 // ===== CORS - dozvoli React frontend =====
 builder.Services.AddCors(options =>
@@ -121,14 +118,6 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     await SeedData.Initialize(db);
-}
-
-// ===== AUTOMATSKA MIGRACIJA =====
-// Kreira bazu i tabele automatski pri pokretanju ako ne postoje
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
 }
 
 // ===== MIDDLEWARE PIPELINE =====
