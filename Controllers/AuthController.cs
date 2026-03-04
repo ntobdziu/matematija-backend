@@ -49,15 +49,16 @@ public class AuthController : ControllerBase
             LozinkaHash = hash,
             Uloga = dto.Uloga == "Admin" ? "Admin" : (dto.Uloga == "Profesor" ? "Profesor" : "Ucenik"),
             Razred = dto.Razred,
-            EmailPotvrđen = false,
-            VerifikacioniKod = kod,
-            KodIsticeNa = DateTime.UtcNow.AddMinutes(10)
+            EmailPotvrđen = true
+            //VerifikacioniKod = kod,
+            //KodIsticeNa = DateTime.UtcNow.AddMinutes(10)
         };
 
         _db.Korisnici.Add(korisnik);
         await _db.SaveChangesAsync();
 
         // Pošalji email sa verifikacionim kodom
+        /*  
         try
         {
             await _emailService.PosaljiVerifikacioniKod(korisnik.Email, kod);
@@ -67,11 +68,21 @@ public class AuthController : ControllerBase
             // Loguj grešku, ali ne prekidaj registraciju
             Console.WriteLine($"Greška pri slanju emaila: {ex.Message}");
         }
+        */
+        var token = _jwt.GenerisiToken(korisnik);
 
-        return Ok(new
+        return Ok(new AuthOdgovorDto
         {
-            poruka = "Nalog kreiran! Provjeri email za verifikacioni kod.",
-            korisnikId = korisnik.Id
+            Token = token,
+            Korisnik = new KorisnikDto
+            {
+                Id = korisnik.Id,
+                Ime = korisnik.Ime,
+                Prezime = korisnik.Prezime,
+                Email = korisnik.Email,
+                Uloga = korisnik.Uloga,
+                Razred = korisnik.Razred
+            }
         });
     }
 
@@ -131,6 +142,7 @@ public class AuthController : ControllerBase
             return Unauthorized(new { poruka = "Pogrešan email ili lozinka." });
 
         // Provjeri da li je email potvrđen
+        /*
         if (!korisnik.EmailPotvrđen)
             return Unauthorized(new
             {
@@ -138,7 +150,7 @@ public class AuthController : ControllerBase
                 korisnikId = korisnik.Id,
                 trebaVerifikacija = true
             });
-
+        */
         var token = _jwt.GenerisiToken(korisnik);
 
         return Ok(new AuthOdgovorDto
