@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nejla1\\Desktop\\matematija-backend\\nixpacks.toml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:nixpacks.toml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Data\\SeedData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,24 +66,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-04T16:11:00.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -91,12 +91,11 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-04T16:06:46.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T16:06:46.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "nixpacks.toml",
               "DocumentMoniker": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\nixpacks.toml",
               "RelativeDocumentMoniker": "nixpacks.toml",
@@ -216,15 +215,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Nejla1\\Desktop\\matematija-backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAmwGcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T16:36:04.651Z"
+              "WhenOpened": "2026-02-18T16:36:04.651Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
