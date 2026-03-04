@@ -8,6 +8,6 @@
     "\\Models",
     "\\{Controllers,Models,DTOs,Data,Services,Middleware}"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

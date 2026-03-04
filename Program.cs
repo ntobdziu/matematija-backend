@@ -9,9 +9,19 @@ using MatematijaAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 //BAZA:
+var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL")
+    ?? builder.Configuration.GetConnectionString("Default");
+
+// Ako je DATABASE_URL u formatu mysql://, pretvori ga
+if (connectionString.StartsWith("mysql://"))
+{
+    var uri = new Uri(connectionString);
+    connectionString = $"Server={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};User={uri.UserInfo.Split(':')[0]};Password={uri.UserInfo.Split(':')[1]};";
+}
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
-        builder.Configuration.GetConnectionString("Default"),
+        connectionString,
         new MySqlServerVersion(new Version(8, 0, 21))
     ));
 // ===== JWT AUTENTIFIKACIJA =====
