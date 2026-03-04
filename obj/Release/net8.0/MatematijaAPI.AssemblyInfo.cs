@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatematijaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dad85fd42e6806f0d924ba458fb82bfb0f960b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatematijaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatematijaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
