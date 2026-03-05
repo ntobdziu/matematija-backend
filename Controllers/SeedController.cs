@@ -20,7 +20,7 @@ public class SeedController : ControllerBase
         _db = db;
     }
 
-    [HttpPost("dodaj-termine-2026")]
+    [HttpGet("dodaj-termine-2026")]
     [AllowAnonymous] // PRIVREMENO - ukloni nakon testiranja
     public async Task<IActionResult> DodajTermine2026()
     {
@@ -78,28 +78,6 @@ public class SeedController : ControllerBase
                 new() { DatumVreme = new DateTime(2026, 6, 10, 9, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
                 new() { DatumVreme = new DateTime(2026, 6, 11, 15, 0, 0), TipCasaId = 2, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
 
-                // SEPTEMBAR 2026
-                new() { DatumVreme = new DateTime(2026, 9, 1, 10, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 9, 1, 14, 0, 0), TipCasaId = 3, MestaUkupno = 5, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 9, 2, 11, 0, 0), TipCasaId = 2, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 9, 3, 9, 0, 0), TipCasaId = 4, MestaUkupno = 5, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 9, 4, 15, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-
-                // OKTOBAR 2026
-                new() { DatumVreme = new DateTime(2026, 10, 5, 10, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 10, 6, 11, 0, 0), TipCasaId = 2, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 10, 7, 9, 0, 0), TipCasaId = 4, MestaUkupno = 5, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 10, 8, 15, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-
-                // NOVEMBAR 2026
-                new() { DatumVreme = new DateTime(2026, 11, 2, 10, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 11, 3, 11, 0, 0), TipCasaId = 2, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 11, 4, 9, 0, 0), TipCasaId = 4, MestaUkupno = 5, MestaZauzeto = 0, Aktivan = true },
-
-                // DECEMBAR 2026
-                new() { DatumVreme = new DateTime(2026, 12, 1, 10, 0, 0), TipCasaId = 1, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 12, 2, 11, 0, 0), TipCasaId = 2, MestaUkupno = 1, MestaZauzeto = 0, Aktivan = true },
-                new() { DatumVreme = new DateTime(2026, 12, 3, 9, 0, 0), TipCasaId = 4, MestaUkupno = 5, MestaZauzeto = 0, Aktivan = true }
             };
 
             await _db.Termini.AddRangeAsync(termini);
@@ -113,7 +91,7 @@ public class SeedController : ControllerBase
         }
     }
 
-    [HttpPost("dodaj-rezervacije-nejla")]
+    [HttpGet("dodaj-rezervacije-nejla")]
     [AllowAnonymous] // PRIVREMENO
     public async Task<IActionResult> DodajRezervacijeNejla()
     {
